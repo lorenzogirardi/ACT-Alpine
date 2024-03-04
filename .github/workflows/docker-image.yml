@@ -38,7 +38,7 @@ jobs:
           context: ./base/
           platforms: linux/amd64,linux/arm64
           tags: |
-            lgirardi/lg-baseimg:edge
+            lgirardi/lg-baseimg-alpine:edge
           push: true
           run: docker push lgirardi/lg-baseimg-alpine:edge
       - name: Image digest
@@ -70,7 +70,7 @@ jobs:
           context: ./flask/
           platforms: linux/amd64,linux/arm64
           tags: |
-            lgirardi/lg-flaskimg:edge
+            lgirardi/lg-flaskimg-alpine:edge
           push: true
           run: docker push lgirardi/lg-flaskimg-alpine:edge
       - name: Image digest
