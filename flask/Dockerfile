@@ -7,7 +7,7 @@ LABEL area=platform
 ENV PYTHONUNBUFFERED=1
 
 RUN echo "**** install Python ****" && \
-    apk add --no-cache python3=3.11.8-r0 && \
+    apk add --no-cache python3=3.11.9-r0 && \
     if [ ! -e /usr/bin/python ]; then ln -sf python3 /usr/bin/python ; fi && \
     \
     echo "**** install pip ****" && \
