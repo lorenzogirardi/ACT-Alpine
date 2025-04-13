@@ -1,5 +1,5 @@
 # Stage di compilazione per Python dai sorgenti
-FROM ubuntu:24.04 AS builder
+FROM lgirardi/lg-baseimg-alpine:edge AS builder
 LABEL author="k8s.it <l@k8s.it>"
 LABEL stage=build
 
@@ -71,9 +71,9 @@ RUN /usr/local/python/bin/python3 -m ensurepip && \
     /usr/local/python/bin/pip3 install --no-cache --upgrade pip setuptools wheel
 
 # Immagine finale
-FROM ubuntu:24.04
+FROM lgirardi/lg-baseimg-alpine:edge
 LABEL author="k8s.it <l@k8s.it>"
-LABEL layer=flask
+LABEL layer=python
 LABEL area=platform
 
 # Installare solo le librerie di runtime necessarie
