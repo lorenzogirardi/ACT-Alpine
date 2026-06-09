@@ -1,4 +1,4 @@
-FROM alpine:3.21
+FROM alpine:3.24
 
 LABEL author="k8s.it <l@k8s.it>"
 LABEL layer=base
